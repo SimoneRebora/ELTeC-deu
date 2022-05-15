@@ -13,30 +13,56 @@ View(df)
 # Stylo will work by default with the files in the "corpus" folder
 
 # First analysis (dendrogram with 100 MFW)
-stylo(frequencies="table_with_frequencies.txt")
+stylo(corpus.format="xml",
+      corpus.lang="German", 
+      mfw.min=100, 
+      mfw.max=100,
+      mfw.incr=0,
+      distance.measure="dist.delta",
+      analysis.type="CA",
+      write.jpg.file=T,
+      plot.custom.height=16,
+      plot.custom.width=9,
+      frequencies="table_with_frequencies.txt")
 # here files are not actually read from the "corpus" folder
 # as word frequencies are already provided in "table_with_frequencies.txt" file
 
 # Second analysis (dendrogram with 200 MFW)
-stylo(mfw.min=200, 
+stylo(corpus.format="xml",
+      corpus.lang="German", 
+      mfw.min=200, 
       mfw.max=200,
+      mfw.incr=0,
+      distance.measure="dist.delta",
+      analysis.type="CA",
+      write.jpg.file=T,
+      plot.custom.height=16,
+      plot.custom.width=9,
       frequencies="table_with_frequencies.txt")
 
 # Third analysis (Consensus tree with 2000 MFW and Cosine Delta distance)
-stylo(mfw.min=200, 
+stylo(corpus.format="xml",
+      corpus.lang="German", 
+      mfw.min=200, 
       mfw.max=2000,
       mfw.incr=200,
       distance.measure="dist.wurzburg",
       analysis.type="BCT",
+      write.jpg.file=T,
       plot.custom.height=16,
       plot.custom.width=16,
       frequencies="table_with_frequencies.txt")
 
-# Fourth analysis
-stylo.network(frequencies="table_with_frequencies.txt")
+# Fourth analysis (network)
+stylo.network(corpus.format="xml",
+              corpus.lang="German", 
+              mfw.min=200, 
+              mfw.max=2000,
+              mfw.incr=200,
+              distance.measure="dist.wurzburg",
+              frequencies="table_with_frequencies.txt")
 
 # Here is an overview of the options to put between the brackets
-# (or in the "stylo_config.txt" file)
 # 
 # # Type of the corpus
 # 
