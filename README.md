@@ -2,7 +2,8 @@
 
 # ELTeC-deu
 
-This is the German novel collection for the ELTeC, the European Literary Text Collection, produced by the COST Action Distant Reading for European Literary History (CA16204, https://distant-reading.net).
+This is the German novel collection for the ELTeC, the European Literary Text Collection, produced by the COST Action Distant Reading for European Literary History (CA16204, https://distant-reading.net).  
+**Copy forked and modified by Simone Rebora for stylometric analyses.**
 
 ## Release notes
 
